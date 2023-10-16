@@ -65,8 +65,25 @@ public class Main {
             }
         }
 
+   ///////////////////////////////////////////////
+        // Create a zoo with a capacity of 5
+        Zoo myZoo = new Zoo(5);
+
+        // Add animals to the zoo
+        myZoo.addAnimal(new Lion("Scar"));
+        myZoo.addAnimal(new Bear("Yogi"));
+        myZoo.addAnimal(new Lion("Mufasa"));
+        myZoo.addAnimal(new Bear("Smokey"));
+        myZoo.addAnimal(new Tiger("Tony"));
+        myZoo.addAnimal(new Hyena("Shenzi"));
+
+        // Make all animals in the zoo make sounds
+        myZoo.makeAllSounds();
+  ///////////////////////////////////////////////////
+
+
         // Output the separate lists for each species without the "Animal Description" portion
-        System.out.println("Hyenas:");
+        System.out.println("\nHyenas:");
         for (Animal hyena : hyenas) {
             // Extract the age using regular expressions
             Matcher matcher = agePattern.matcher(hyena.getAnimalDesc());
@@ -132,18 +149,6 @@ public class Main {
             System.out.println(); // Add an empty line for separation
         }
 
-        // Create a zoo with a capacity of 5
-        Zoo myZoo = new Zoo(5);
 
-        // Add animals to the zoo
-        myZoo.addAnimal(new Lion("Scar"));
-        myZoo.addAnimal(new Bear("Yogi"));
-        myZoo.addAnimal(new Lion("Mufasa"));
-        myZoo.addAnimal(new Bear("Smokey"));
-        myZoo.addAnimal(new Tiger("Tony"));
-        myZoo.addAnimal(new Hyena("Shenzi"));
-
-        // Make all animals in the zoo make sounds
-        myZoo.makeAllSounds();
     }
 }
